@@ -12,8 +12,8 @@ public class LevelButtonView : MonoBehaviour
 
     public event Action OnClicked;
 
-    private static readonly Color NormalColor = new Color(0.7f, 0.85f, 1f);
-    private static readonly Color CompletedColor = new Color(0.6f, 0.9f, 0.6f);
+    private static readonly Color NormalColor = new Color(0.075f, 0.10f, 0.16f, 0.96f);
+    private static readonly Color CompletedColor = new Color(0.20f, 0.15f, 0.045f, 0.96f);
 
     private void Awake()
     {
