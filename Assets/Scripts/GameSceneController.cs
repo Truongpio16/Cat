@@ -27,7 +27,10 @@ public class GameSceneController : MonoBehaviour
 
         gridManager.OnWin += OnLevelWon;
         gridManager.OnNextLevelClicked += OnNextLevelClicked;
-        gridManager.LoadLevel(SessionState.SelectedLevel);
+        if (SessionState.SelectedLevel != null)
+        {
+            gridManager.LoadLevel(SessionState.SelectedLevel);
+        }
 
         if (SessionState.ReopenPauseOnReturn)
         {

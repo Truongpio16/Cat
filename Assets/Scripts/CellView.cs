@@ -14,12 +14,13 @@ public class CellView : MonoBehaviour, IPointerClickHandler, IPointerDownHandler
     private bool _isWall;
     private bool _wasConflict;
 
-    private static readonly Color WallColor = new Color(0.2f, 0.2f, 0.2f);
-    private static readonly Color EmptyColor = Color.white;
-    private static readonly Color LitColor = new Color(1f, 0.92f, 0.6f);
-    private static readonly Color ConflictColor = new Color(1f, 0.4f, 0.4f);
-    private static readonly Color HintColor = new Color(0.6f, 0.8f, 1f);
-    private static readonly Color AvoidHintColor = new Color(0.75f, 0.6f, 0.9f);
+    // Neon "light-up on black" theme (anh 1)
+    private static readonly Color WallColor = new Color(0.098f, 0.110f, 0.180f);   // navy dam
+    private static readonly Color EmptyColor = new Color(0.929f, 0.890f, 0.729f);  // vang kem mo
+    private static readonly Color LitColor = new Color(0.976f, 0.886f, 0.478f);    // vang gold sang
+    private static readonly Color ConflictColor = new Color(1f, 0.365f, 0.365f);   // do neon
+    private static readonly Color HintColor = new Color(0.353f, 0.831f, 1f);       // cyan (khop subtitle menu)
+    private static readonly Color AvoidHintColor = new Color(1f, 0.420f, 0.769f);  // hong (khop tai meo menu)
 
     public void SetWall(bool hasNumber, int number)
     {

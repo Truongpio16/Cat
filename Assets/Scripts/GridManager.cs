@@ -11,6 +11,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] private LevelData debugLevel;
     [SerializeField] private CellView cellPrefab;
     [SerializeField] private RectTransform gridContainer;
+    [SerializeField] private RectTransform gridFrame;
+    [SerializeField] private float gridFramePadding = 28f;
     [SerializeField] private float cellSize = 110f;
     [SerializeField] private float cellGap = 10f;
     [SerializeField] private float safeAreaLeftX = -480f;
@@ -112,6 +114,16 @@ public class GridManager : MonoBehaviour
         gridContainer.anchoredPosition = new Vector2(
             gridLeft + activeCellSize / 2f,
             gridTop - activeCellSize / 2f);
+
+        if (gridFrame != null)
+        {
+            gridFrame.anchoredPosition = new Vector2(
+                (_gridData.Width - 1) * activeCellSize / 2f,
+                -(_gridData.Height - 1) * activeCellSize / 2f);
+            gridFrame.sizeDelta = new Vector2(
+                gridPixelWidth + gridFramePadding * 2f,
+                gridPixelHeight + gridFramePadding * 2f);
+        }
 
         float cellVisualSize = activeCellSize - cellGap;
 
