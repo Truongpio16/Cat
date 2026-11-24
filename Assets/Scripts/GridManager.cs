@@ -33,6 +33,7 @@ public class GridManager : MonoBehaviour
 
     public event Action OnWin;
     public event Action OnNextLevelClicked;
+    public event Action<HintMove> OnHintFeedback; // hint is null when no clear hint exists
 
     private GridData _gridData;
     private CellView[,] _cellViews;
@@ -339,6 +340,7 @@ public class GridManager : MonoBehaviour
         hapticManager.LightTap();
 
         HintMove hint = _gridData.FindHint();
+        OnHintFeedback?.Invoke(hint);
         if (hint == null)
         {
             Debug.Log("Khong tim thay goi y ro rang luc nay.");
