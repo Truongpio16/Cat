@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
+  m_SizeDelta: {x: 88, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2334743106513622280
 CanvasRenderer:
@@ -58,14 +58,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.55, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: c3b891ab245c71c4abf79b5b18b04206, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4280716543
   m_fontColor: {r: 1, g: 0.55, b: 0.15, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -306,6 +306,14 @@ MonoBehaviour:
   animator: {fileID: 4638519742185562381}
   numberText: {fileID: 7150183307608215444}
   bulbIcon: {fileID: 22162939378285467}
+  bulbImage: {fileID: 6554570373081461349}
+  bulbSprites:
+  - {fileID: 21300000, guid: c3b891ab245c71c4abf79b5b18b04206, type: 3}
+  - {fileID: 21300000, guid: 94e91d62c43c5f24dbca66c8b84b071d, type: 3}
+  - {fileID: 21300000, guid: c065f4110f3e42847b95ac8785f0fee6, type: 3}
+  - {fileID: 21300000, guid: bd66dc0e49031004d91b270bd299eba1, type: 3}
+  - {fileID: 21300000, guid: 208533bba1f9b1a429c88e3772805b7c, type: 3}
+  - {fileID: 21300000, guid: 1b04015d8f3717d4fb73b0b7711b94bc, type: 3}
 --- !u!114 &4638519742185562381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +333,7 @@ MonoBehaviour:
   scaleDuration: 0.08
   popDuration: 0.18
   popOvershoot: 1.15
+  popWiggleAngle: 16
   shrinkDuration: 0.12
   pulseScale: 1.1
   pulseDuration: 0.16

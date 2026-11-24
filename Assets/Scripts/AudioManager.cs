@@ -5,6 +5,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioClip buttonClickClip;
+    [SerializeField] private AudioClip buttonHoverClip;
     [SerializeField] private AudioClip placeCatClip;
     [SerializeField] private AudioClip removeCatClip;
     [SerializeField] private AudioClip conflictClip;
@@ -36,6 +37,7 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlayButtonClick() => Play(buttonClickClip);
+    public void PlayButtonHover() => Play(buttonHoverClip);
     public void PlayPlaceCat() => Play(placeCatClip);
     public void PlayRemoveCat() => Play(removeCatClip);
     public void PlayConflict() => Play(conflictClip);

@@ -135,6 +135,7 @@ public class GridManager : MonoBehaviour
                 RectTransform rt = view.GetComponent<RectTransform>();
                 rt.anchoredPosition = new Vector2(x * activeCellSize, -y * activeCellSize);
                 rt.sizeDelta = new Vector2(cellVisualSize, cellVisualSize);
+                view.SetLevelCatIndex(SessionState.SelectedLevelIndex);
 
                 CellData data = _gridData.GetCell(x, y);
                 if (data.Type == CellType.Empty)
@@ -245,7 +246,7 @@ public class GridManager : MonoBehaviour
     private void RefreshCell(int x, int y)
     {
         CellData data = _gridData.GetCell(x, y);
-        _cellViews[x, y].SetBulb(data.HasBulb);
+        _cellViews[x, y].SetBulb(data.HasBulb, data.HasConflict);
         _cellViews[x, y].SetLit(data.IsLit);
         _cellViews[x, y].SetConflict(data.HasConflict);
     }
